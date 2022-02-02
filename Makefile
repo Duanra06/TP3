@@ -1,4 +1,4 @@
-#CFLAGS=I/entete
+#CFLAGS=I./entete
 TARGET=main
 MCU=atmega32u4
 
@@ -8,10 +8,10 @@ $(TARGET).out: delay.o $(TARGET).o
 	avr-gcc -mmcu=atmega32u4 -Os -Wall -o $(TARGET).out $(TARGET).o delay.o
 
 delay.o: delay.c delay.h
-	avr-gcc -mmcu=$(MCU) -Os -Wall -I/entete -c delay.c
+	avr-gcc -mmcu=$(MCU) -Os -Wall -I./entete -c delay.c
 
 main.o: main.c
-	avr-gcc -mmcu=$(MCU) -Os -Wall -I/entete -c main.c
+	avr-gcc -mmcu=$(MCU) -Os -Wall -I./entete -c main.c
 
 clean:
 	rm *.o $(TARGET).out

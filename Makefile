@@ -7,7 +7,7 @@ all: $(TARGET).out
 $(TARGET).out: delay.o $(TARGET).o
 	avr-gcc -mmcu=atmega32u4 -Os -Wall -o $(TARGET).out $(TARGET).o delay.o
 
-delay.o: delay.c delay.h
+delay.o: delay.c entete/delay.h
 	avr-gcc -mmcu=$(MCU) -Os -Wall -I./entete -c delay.c
 
 main.o: main.c

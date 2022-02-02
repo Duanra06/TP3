@@ -1,0 +1,1 @@
+void MonDelai(long);

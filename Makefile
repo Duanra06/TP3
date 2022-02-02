@@ -1,3 +1,4 @@
+#CFLAGS=I/entete
 TARGET=main
 MCU=atmega32u4
 
